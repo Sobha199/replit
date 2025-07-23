@@ -45,8 +45,7 @@ def login_page():
                 st.session_state.emp_name = user_row.iloc[0]['Emp Name']
                 st.session_state.team_lead = user_row.iloc[0]['Team Lead']
             else:
-                st.error("Invalid username or password")
-
+               
 # Page 2 - Form Input
 def form_page():
     st.title("Data Entry Form")
