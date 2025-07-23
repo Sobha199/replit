@@ -32,11 +32,11 @@ st.markdown("""
 def login_page():
     st.image("s2m-logo.png", width=200)
     st.title("S2M Health Private Ltd Login")
-    username = st.text_input("Username")
-    password = st.text_input("Password", type="password")
+    username = st.text_input("username")
+    password = st.text_input("password", type="password")
     if st.button("Sign In"):
         with st.spinner("Logging in..."):
-            user_row = login_df[(login_df['Username'] == username) & (login_df['Password'] == password)]
+            user_row = login_df[(login_df['username'] == username) & (login_df['password'] == password)]
             if not user_row.empty:
                 st.success("Login successful!")
                 st.session_state.logged_in = True
