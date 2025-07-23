@@ -6,6 +6,7 @@ from io import BytesIO
 
 # Load Data
 login_df = pd.read_csv("Login tracking.csv")
+login_df.columns = login_df.columns.str.strip().str.lower().str.replace(" ", "_")
 tracking_df = pd.read_csv("Tracking Sample (1).csv")
 
 # Initialize session state
